@@ -1,0 +1,615 @@
+body{
+  background: black;
+ font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-decoration: none;
+  
+   letter-spacing: 0px;
+}
+
+      @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Rock+Salt&display=swap');
+
+:root {
+  --white: #fff;
+  --red: #FF5757;
+  --gray: #fff;
+  --blue: #FF5757;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, button, input, textarea {
+  font: 400 16px "Roboto", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-section {
+  padding: 70px 0 64px;
+}
+
+.container {
+ max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px
+}
+
+.section-title {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-decoration: none;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #FF5757;
+}
+
+.about-movie-image {
+  float: left;
+  border-radius: 8%;
+  margin: 0 20px 10px 0;
+  width: 200px;
+  height: auto;
+}
+
+.section-description {
+  color: white;
+}
+
+.section-description + .section-description {
+  margin-top: 16px;
+}
+
+.normal-section + .normal-section {
+  margin-top: 80px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.movie-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: white;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+   text-decoration: none;
+}
+
+.product-image {
+  width: 250px; /* Flex wrap coloca 2 posters por linha, pq a seção tem 600px */
+  height: 250px;
+  border-radius: 5px;
+}
+
+.product-price-container {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.product-price {
+  margin-right: 12px;
+  text-decoration: none;
+font-family: 'Roboto', 'Segoe UI', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.button-hover-background {
+  background: var(--red);
+  color: var(--white);
+  border: 2px solid var(--red);
+  border-radius: 6px;
+  padding: 4px 2px;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.button-hover-background:hover {
+  background: transparent;
+  color: var(--red);
+}
+
+.cart-table {
+  color: white;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-head-item {
+  color: white;
+  text-align: start;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.second-col,
+.third-col {
+  width: 26%;
+}
+
+.cart-product td {
+  padding: 8px 0;
+}
+
+.product-identification {
+  display: flex;
+  align-items: center;
+}
+
+.cart-product-image {
+  width: 100px;
+  height: 100px;
+}
+
+.cart-product-title {
+  margin-left: 16px;
+  font-size: 18px;
+}
+
+.cart-product-price {
+font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-decoration: none;
+}
+
+.product-qtd-input {
+  width: 48px;
+  height: 34px;
+  border-radius: 6px;
+  border: 2px solid var(--blue);
+  text-align: center;
+  background: white;
+}
+
+.remove-product-button {
+  margin-left: 12px;
+  background: #ff0000;
+  color: var(--white);
+  padding: 10px 8px;
+  border: 0;
+  border-radius: 6px;
+
+  transition: filter 0.2s;
+}
+
+.remove-product-button:hover {
+  filter: brightness(0.8);
+}
+
+.cart-total-container {
+  border-top: 1px solid var(--gray);
+  text-align: end;
+  padding: 6px 16px 0 0;
+  font-size: 18px;
+}
+
+.cart-total-container strong {
+  margin-right: 12px;
+}
+
+.purchase-button {
+  display: flex;
+  margin: 24px auto 0;
+  background: var(--blue);
+  color: var(--white);
+  border: 0;
+  border-radius: 6px;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+
+  transition: filter 0.2s;
+}
+
+.purchase-button:hover {
+  filter: brightness(0.8);
+}
+
+
+@media (max-width: 584px) {
+  .movie-title-large {
+    font-size: 36px;
+  }
+
+  .schedule-item {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .schedule-item + .schedule-item {
+    margin-top: 12px;
+  }
+
+  .show-date,
+  .show-place {
+    width: 32%;
+    padding: 4px;
+  }
+
+  .show-city {
+    width: 33%;
+    padding: 4px;
+  }
+
+  .buy-ticket-button {
+    width: 60%;
+    margin-top: 12px;
+    padding: 12px 2px;
+  }
+
+
+  .products-container {
+    justify-content: center;
+  }
+
+  .product-identification {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-product-title {
+    margin-top: 6px;
+  }
+
+  .product-qtd-input {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .remove-product-button {
+    display: block;
+    margin: 8px auto 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .about-movie-image {
+    width: 160px;
+  }
+
+  .main-footer-container {
+    flex-direction: column;
+  }
+
+  .movie-title-medium {
+    margin-bottom: 12px;
+  }
+}
+
+#link-baixo{
+  z-index: 100000000000000;
+  text-decoration: none;
+  font-size: 10px;
+  background: transparent ;
+  position: fixed;
+ padding: 10px;
+ border-radius: 100px;
+}
+
+#link-baixo :hover{
+  opacity: 0.9;
+  transform: scale(1.1);
+  }
+
+html{
+  scroll-behavior: smooth;
+}
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
+
+body{
+
+    font-family: 'Urbanist', sans-serif;
+    overflow-x: hidden;
+}
+
+a{
+
+    text-decoration: none;
+    color: currentColor;
+}
+
+a:hover{
+
+    color: currentColor;
+}
+
+header{
+   z-index: 1000000;
+   position: absolute;
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+header .container-fluid{
+    width: 100%;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media(max-width:992px){
+    header .container-fluid{
+        padding: 0 5%;
+    }
+}
+
+header .navb-logo img{
+    width: 140px;
+    height: 66px;
+}
+
+header .navb-items{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    letter-spacing: 3px;
+}
+
+header .item{
+    text-align: center;
+    margin-inline: 3%;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #FF5757;
+    padding: 0.8em 1.75em;
+    transition: all .1s ease;
+    cursor: pointer;
+    --color: #FF5757;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+header .item:hover{
+    background-color: #FF5757;
+    color: black;
+}
+
+header .item-button a{
+    background-color: #FF5757;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: all .5s ease;
+    border-radius: 100px;
+}
+
+header .item-button a:hover{
+   opacity: 0.7;
+   border: solid 5px #FF5757 ;
+   transition: 100ms linear;
+}
+header .mobile-toggler{
+    font-size: 30px;
+}
+
+.modal-dialog{
+
+    margin: 0;
+    width: 430px;
+}
+
+@media(max-width: 450px){
+    .modal-dialog{
+        width: 82%;
+    }
+}
+
+.modal-content{
+    border-radius: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: black;
+}
+.modal-header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    margin: 0 auto;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #fefefe;
+}
+
+.modal-header img{
+    width: 140px;
+    height: 66px;
+    margin-top: 17.5px;
+}
+
+.modal-header .btn-close{
+    background: transparent;
+    opacity: 1;
+}
+
+.modal-header i{
+    color: #FF5757;
+    font-size: 30px;
+}
+
+.modal-body{
+    width: 88%;
+    margin: 0 auto;
+    padding: 75px 0 0 0;
+    flex: unset;
+}
+
+.modal-body .modal-line{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7px 0;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: all .5s ease;
+    color: #FF5757;
+    border-bottom: 1px solid #FF5757;
+}
+
+.modal-body .modal-line:hover{
+    color: #fefefe;
+    border-bottom: 1px solid #fefefe;
+}
+
+.modal-line a{
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: #fefefe;
+}
+
+.modal-line i{
+    color: currentColor;
+    font-size: 30px;
+    width: 35px;
+    margin-right: 15px;
+    padding: 0 0 3px 3px;
+}
+
+.navb-button{
+    width: 13%;
+    height: 47px;
+    background-color: #FF5757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+    border-radius: 10000px;
+}
+
+.navb-button:hover{
+    opacity: 0.67;
+}
+
+.mobile-modal-footer{
+    width: 87%;
+    margin: 0 auto;
+    padding: 20% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    color: #FF5757;
+}
+
+.mobile-modal-footer i:hover{
+    color: #fefefe;
+}
+
+
+
+.section-1{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1 p{
+    font-size: 75px;
+    font-weight: 700;
+    color: #FF5757;
+    width: 90%;
+    text-align: center;
+}
+
+@media(max-width:767px){
+    .section-1 p{
+        font-size: 50px;
+        text-align: start;
+        width: 70%;
+        margin: auto;
+    }
+}
+
+form#moredishes{
+   display: flex;
+   align-items: center;
+   justify-content: center ;
+   flex-direction: column;
+}
+.more{
+    text-align: center;
+    margin-inline: 3%;
+    font-size: 20px;
+    letter-spacing: 0px;
+    color: #FF5757;
+    padding: 0.8em 1.75em;
+    transition: all .1s ease;
+    cursor: pointer;
+    --color: #FF5757;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.more:hover{
+    background-color: #FF5757;
+    color: black;
+}
