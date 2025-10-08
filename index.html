@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="shortcut icon" type="imagex/png" href="midias/logo.png">
   <link rel="stylesheet" href="index.css">
 
@@ -28,11 +27,13 @@
     <div class="container-fluid">
       <div class="navb-logo">
       </div>
+
       <div class="navb-items d-none d-xl-flex">
-        <div class="item">
-          <a href="menu.html">MENU</a>
-        </div>
+          <button type="button" class="item" onclick="window.location.href='menu.html'">
+            MENU
+          </button>
       </div>
+
 
       <div class="mobile-toggler d-lg-none">
         <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">
@@ -82,7 +83,6 @@
   <div class="flip-main">
     <div class="container">
       <div class="row">
-        <!-- flip card start -->
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -113,11 +113,12 @@
     </div>
   </div>
 
-  <form id="moredishes">
-    <button class="more">
-      <a href="menu.html">MORE DISHES</a>
-    </button>
-  </form>
+ <form id="moredishes">
+  <button type="button" class="more" onclick="window.location.href='menu.html'">
+    MORE DISHES
+  </button>
+</form>
+
 
   <div>
     <img src="midias/linha2.png" style="width:100%;">
